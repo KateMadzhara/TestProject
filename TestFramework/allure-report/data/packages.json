@@ -1,0 +1,49 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Is exists data: ",
+    "children" : [ {
+      "name" : "Check that data presents in DB",
+      "uid" : "b1b881c8c8eb9871",
+      "parentUid" : "f0b83a2be4abb3f61cdf39774f93382a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1540903746532,
+        "stop" : 1540903746550,
+        "duration" : 18
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f0b83a2be4abb3f61cdf39774f93382a"
+  }, {
+    "name" : "Result is true?: ",
+    "children" : [ {
+      "name" : "Check that reporting works",
+      "uid" : "6ddb9bb62c48523",
+      "parentUid" : "c8334b7e9c994ca6211b1312f8781353",
+      "status" : "failed",
+      "time" : {
+        "start" : 1540903746565,
+        "stop" : 1540903746571,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Check that function returns true",
+      "uid" : "714de5a5cb6d795c",
+      "parentUid" : "c8334b7e9c994ca6211b1312f8781353",
+      "status" : "passed",
+      "time" : {
+        "start" : 1540903746572,
+        "stop" : 1540903746573,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c8334b7e9c994ca6211b1312f8781353"
+  } ]
+}

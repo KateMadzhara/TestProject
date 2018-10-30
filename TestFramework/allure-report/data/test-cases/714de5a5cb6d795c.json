@@ -1,0 +1,52 @@
+{
+  "uid" : "714de5a5cb6d795c",
+  "name" : "Check that function returns true",
+  "fullName" : "Result is true?: .Check that function returns true",
+  "historyId" : "2b6c52091ffb72019b2d13cb87f0cd0a",
+  "time" : {
+    "start" : 1540903746572,
+    "stop" : 1540903746573,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Result is true?: "
+  }, {
+    "name" : "testClass",
+    "value" : "Result is true?: "
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that function returns true"
+  }, {
+    "name" : "package",
+    "value" : "Result is true?: "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "714de5a5cb6d795c.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "parameterValues" : [ ]
+}

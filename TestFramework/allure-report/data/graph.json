@@ -1,0 +1,31 @@
+[ {
+  "uid" : "b1b881c8c8eb9871",
+  "name" : "Check that data presents in DB",
+  "time" : {
+    "start" : 1540903746532,
+    "stop" : 1540903746550,
+    "duration" : 18
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "714de5a5cb6d795c",
+  "name" : "Check that function returns true",
+  "time" : {
+    "start" : 1540903746572,
+    "stop" : 1540903746573,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6ddb9bb62c48523",
+  "name" : "Check that reporting works",
+  "time" : {
+    "start" : 1540903746565,
+    "stop" : 1540903746571,
+    "duration" : 6
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,60 @@
+{
+  "uid" : "6ddb9bb62c48523",
+  "name" : "Check that reporting works",
+  "fullName" : "Result is true?: .Check that reporting works",
+  "historyId" : "fb5645dae3ac5d7349fe3feb1c5a965c",
+  "time" : {
+    "start" : 1540903746565,
+    "stop" : 1540903746571,
+    "duration" : 6
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusDetails" : {
+    "message" : "Expected true to equal false.",
+    "trace" : "Error: Expected true to equal false.\n                    at <Jasmine>\n                    at UserContext.<anonymous> (D:\\TestProject\\TestFramework\\test\\1test\\suite.js:8:36)\n                    at <Jasmine>",
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Result is true?: "
+  }, {
+    "name" : "testClass",
+    "value" : "Result is true?: "
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that reporting works"
+  }, {
+    "name" : "package",
+    "value" : "Result is true?: "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "statusMessage" : {
+    "present" : true
+  },
+  "source" : "6ddb9bb62c48523.json",
+  "statusDetailsSafe" : {
+    "message" : "Expected true to equal false.",
+    "trace" : "Error: Expected true to equal false.\n                    at <Jasmine>\n                    at UserContext.<anonymous> (D:\\TestProject\\TestFramework\\test\\1test\\suite.js:8:36)\n                    at <Jasmine>",
+    "flaky" : false
+  },
+  "parameterValues" : [ ]
+}

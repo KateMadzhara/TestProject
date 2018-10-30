@@ -1,0 +1,49 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Is exists data: ",
+    "children" : [ {
+      "name" : "Check that data presents in DB",
+      "uid" : "b1b881c8c8eb9871",
+      "parentUid" : "648e41a82f30ccf290268fb2a57ff364",
+      "status" : "passed",
+      "time" : {
+        "start" : 1540903746532,
+        "stop" : 1540903746550,
+        "duration" : 18
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "648e41a82f30ccf290268fb2a57ff364"
+  }, {
+    "name" : "Result is true?: ",
+    "children" : [ {
+      "name" : "Check that reporting works",
+      "uid" : "6ddb9bb62c48523",
+      "parentUid" : "b6d7b3fac014b5860c3877f691c16076",
+      "status" : "failed",
+      "time" : {
+        "start" : 1540903746565,
+        "stop" : 1540903746571,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Check that function returns true",
+      "uid" : "714de5a5cb6d795c",
+      "parentUid" : "b6d7b3fac014b5860c3877f691c16076",
+      "status" : "passed",
+      "time" : {
+        "start" : 1540903746572,
+        "stop" : 1540903746573,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b6d7b3fac014b5860c3877f691c16076"
+  } ]
+}

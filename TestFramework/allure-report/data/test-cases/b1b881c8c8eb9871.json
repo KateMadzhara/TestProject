@@ -1,0 +1,52 @@
+{
+  "uid" : "b1b881c8c8eb9871",
+  "name" : "Check that data presents in DB",
+  "fullName" : "Is exists data: .Check that data presents in DB",
+  "historyId" : "c11344d0e78a9b48bd6ac2188a5c62b4",
+  "time" : {
+    "start" : 1540903746532,
+    "stop" : 1540903746550,
+    "duration" : 18
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Is exists data: "
+  }, {
+    "name" : "testClass",
+    "value" : "Is exists data: "
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that data presents in DB"
+  }, {
+    "name" : "package",
+    "value" : "Is exists data: "
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "source" : "b1b881c8c8eb9871.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "parameterValues" : [ ]
+}

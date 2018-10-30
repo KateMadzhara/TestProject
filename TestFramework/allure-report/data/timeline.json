@@ -1,0 +1,41 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Check that data presents in DB",
+    "uid" : "b1b881c8c8eb9871",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1540903746532,
+      "stop" : 1540903746550,
+      "duration" : 18
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check that function returns true",
+    "uid" : "714de5a5cb6d795c",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1540903746572,
+      "stop" : 1540903746573,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check that reporting works",
+    "uid" : "6ddb9bb62c48523",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1540903746565,
+      "stop" : 1540903746571,
+      "duration" : 6
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}
