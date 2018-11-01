@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1541073406631' stop='1541073414477'>
+    <name>Check that some balance cases</name>
+    <title>Check that some balance cases</title>
+    <test-cases>
+        <test-case start='1541073406631' status='passed' stop='1541073407331'>
+            <name>random balance > 0</name>
+            <title>random balance > 0</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1541073407333' status='failed' stop='1541073413469'>
+            <name>Check balance = 0 for collection charge off</name>
+            <title>Check balance = 0 for collection charge off</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Expected 8 to equal 0.</message>
+                <stack-trace>Error: Expected 8 to equal 0.
+                    at &lt;Jasmine>
+                    at case2.test.then (D:\TestProject\TestFramework\test\3test\suite.js:19:25)
+                    at &lt;Jasmine>
+                    at process._tickCallback (internal/process/next_tick.js:188:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1541073413469' status='passed' stop='1541073414477'>
+            <name>Check cio balance = -1 then no npds balance > -1</name>
+            <title>Check cio balance = -1 then no npds balance > -1</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

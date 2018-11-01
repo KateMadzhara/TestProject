@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
-const test = require('assert');
+const assert = require('assert');
 // Connection url
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://localhost:27017/';
 // Database Name
 const dbName = 'test';
 
@@ -10,20 +10,23 @@ module.exports = {
         return new Promise(resolve => {
             // Connect using MongoClient
         MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
-        // Create a collection we want to drop later
-        const col = client.db(dbName).collection('test');
-            // Show that duplicate records got dropped
+        const db = client.db(dbName);
+        function simplePipeline(db, callback) {
+            const col = db.collection('test');
             col.aggregate([
-                {$match: {name: "EPUAKYIW1379"}}
+                {$match: {"name": "EPUAKYIW1379"}}
             ], function(err, items) {
-            var isExists = false;
-                 if(items.length > 0) {
-                    isExists = true;   
-                 }
-            client.close();
+                items.toArray(function(err, result) {
+            var isExists = result.length;
             resolve(isExists);
-            });
         });
         });
-    }
+        }
+        simplePipeline(db, function() {
+            client.close();
+          });
+        });
+
+    })
+}
 }
