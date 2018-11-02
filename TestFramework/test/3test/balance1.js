@@ -15,24 +15,22 @@ module.exports = {
                         {$limit: 1}
                     ], function(err, items) {
                         items.toArray(function(err, result) {
-                        var isExist = 0;
-                        result.forEach(function(elem) {
-                            if (elem.length === 0) {
-                                isExist = 0;   
-                            } else if (parseInt(elem.balance) > 0) {
-                                isExist = 1;
-                            }
-                        })
-                        
-                        resolve(isExist);
+                            var isExist = 0;
+                            result.forEach(function(elem) {
+                                if (elem.length === 0) {
+                                    isExist = 0;   
+                                } else if (parseInt(elem.balance) > 0) {
+                                    isExist = 1;
+                                }
+                            })
+                            resolve(isExist);
+                        });
                     });
-                });
                 }
                 simplePipeline(db, function() {
                     client.close();
-                  });
                 });
-        
-            })
-        }
-        }
+            });
+        })
+    }
+}

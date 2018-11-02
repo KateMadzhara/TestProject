@@ -10,18 +10,18 @@ describe("Check that some balance cases", function() {
     });
     it("random balance > 0", function() {
         return case1.test().then((isExists) => {if (isExists == undefined || isExists == null) {
-			throw new Error("Test result is empty");
-		} expect(isExists).toEqual(1)})
+			    throw new Error("Test result is empty");
+		    } expect(isExists).toEqual(1)})
     });
     it("Check balance = 0 for collection charge off", function() {
         return case2.test().then((failResults) => {if (failResults == undefined || failResults == null) {
-			throw new Error("Test result is empty");
-		} expect(failResults).toEqual(0)})
+			    throw new Error("Test result is empty");
+		    } expect(failResults).toEqual(0)})
     });
     it("Check cio balance = -1 then no npds balance > -1", function() {
         return case3.test().then((failResults) => {if (failResults == undefined || failResults == null) {
-			throw new Error("Test result is empty");
-		} expect(failResults).toEqual(0)})
+			    throw new Error("Test result is empty");
+		    } expect(failResults).toEqual(0)})
     });
     afterEach(function() {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;

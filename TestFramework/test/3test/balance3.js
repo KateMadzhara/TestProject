@@ -1,10 +1,5 @@
 var MongoClient = require('mongodb').MongoClient,
-    config = require('../mongo.config'),
-    footnotes = ["23", "28", "29", "38", "40", "47",
-                 "51", "53", "76", "79", "80", "83", 
-                 "106", "112", "125",  "167", "187", 
-                 "235", "242", "246",  "286", "295", 
-                 "297", "305", "422", "432"];
+    config = require('../mongo.config');
 
 module.exports = {
     test: function() {
@@ -39,11 +34,10 @@ module.exports = {
                         });
                     });
                 }
-            simplePipeline(db, function() {
-                client.close();
+                simplePipeline(db, function() {
+                    client.close();
                 });
             });
-    
         });
     }
 };

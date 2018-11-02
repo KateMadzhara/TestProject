@@ -6,5 +6,4 @@ describe("Is exists data: ", function() {
 			throw new Error("Test result is empty");
 		}  expect(result).toEqual(1)})
     })
-
 });

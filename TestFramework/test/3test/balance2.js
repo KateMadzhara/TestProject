@@ -35,15 +35,15 @@ module.exports = {
                                     failResults += 1;
                                 }
                             });
-                        resolve(failResults);
+                            resolve(failResults);
                         })
                     })
-                    }
-                    simplePipeline(db, function() {
-                        client.close();
-                      });
-                    });
+                }
+                simplePipeline(db, function() {
+                    client.close();
+                });
+            });
             
-                })
-            }
-            }
+        })
+    }
+}
