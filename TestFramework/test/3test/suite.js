@@ -10,7 +10,7 @@ describe("Check that some balance cases", function() {
     });
     it("random balance > 0", function() {
         return case1.test().then((result) => {expect(result).toEqual(true)}).catch(errorMessage => {
-            console.log(errorMessage)
+            throw new Error(errorMessage);
         })
     });
     it("Check balance = 0 for collection charge off", function() {

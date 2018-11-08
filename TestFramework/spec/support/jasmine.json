@@ -6,7 +6,6 @@
   "helpers": [
     "test/**/*.js"
   ],
-  "session": ["session"],
   "stopSpecOnExpectationFailure": false,
   "random": false
 }
