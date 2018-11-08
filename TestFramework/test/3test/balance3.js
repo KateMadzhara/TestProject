@@ -1,17 +1,21 @@
 var MongoClient = require('mongodb').MongoClient,
-    config = require('../mongo.config');
+    config = require('../config.json'),
+    util = require('../util');
 
 module.exports = {
     test: function() {
         return new Promise(resolve => {
             // Connect using MongoClient
             MongoClient.connect(config.url, { useNewUrlParser: true }, function(err, client) {
-                var db = client.db(config.dbName);
-                function simplePipeline(db, callback) {
-                    var col = db.collection('l1cio');
-                    col.aggregate([
+                if (err) { 
+                    throw new Error("Something not good happened");
+                }
+                var db = client.db(config.dbName),
+                    col = db.collection('l1cio')
+                    
+                col.aggregate([
                         {$match: {
-                            "_id.session": config.sessionId, 
+                            "_id.session": util.sessionId, 
                             "value.trade.Balance": "-1"
                         }},
                         {$project: {
@@ -22,22 +26,19 @@ module.exports = {
                         }},
                         {$match: {
                             isBalanceEq: false}}        
-                    ], function(err, items) {
-                        items.toArray(function(err, result) {
-                            var failResults = 0;
-                            if (result.length > 0) {
-                                result.forEach(function(elem) {
-                                    failResults += 1;
-                                })
+                        ], function(err, items) {
+                            if (err) { 
+                                throw new Error("Something not good happened");
                             }
-                            resolve(failResults);
+                            items.toArray(function(err, result) {
+                                if (err) { 
+                                    throw new Error("Something not good happened");
+                                }
+                                resolve(result.length === 0);
+                                client.close();
+                            });
                         });
                     });
-                }
-                simplePipeline(db, function() {
-                    client.close();
-                });
-            });
-        });
-    }
-};
+                })
+            }
+        }

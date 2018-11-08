@@ -1,16 +1,20 @@
 var MongoClient = require('mongodb').MongoClient,
-    config = require('../mongo.config');
+    config = require('../config.json'),
+    util = require('../util');
 
 module.exports = {
     test: function() {
         return new Promise(resolve => {
             // Connect using MongoClient
             MongoClient.connect(config.url, { useNewUrlParser: true }, function(err, client) {
-                var db = client.db(config.dbName);
-                function simplePipeline(db, callback) {
-                    var col = db.collection('l1cio')
-                    col.aggregate([
-                        {$match: {"_id.session": config.sessionId}},
+                if (err) { 
+                    throw new Error("Something not good happened");
+                }
+                var db = client.db(config.dbName),
+                    col = db.collection('l1cio')
+                    
+                col.aggregate([
+                        {$match: {"_id.session": util.sessionId}},
                         {$project: {
                             trade: "$value.trade"
                         }},
@@ -28,22 +32,18 @@ module.exports = {
                             ]
                         }}
                     ], function(err, items) {
+                        if (err) { 
+                            throw new Error("Something not good happened"); 
+                        }
                         items.toArray(function(err, result) {
-                            var failResults = 0;
-                            result.forEach(function(elem) {
-                                if (elem.cioBalance != 0) {
-                                    failResults += 1;
-                                }
-                            });
-                            resolve(failResults);
-                        })
-                    })
-                }
-                simplePipeline(db, function() {
-                    client.close();
+                            if (err) { 
+                                throw new Error("Something not good happened");
+                            }
+                            resolve(result.every(elem => parseInt(elem.cioBalance) !== 0));
+                            client.close();
+                        });
+                    });
                 });
-            });
-            
-        })
+            })
+        }
     }
-}
