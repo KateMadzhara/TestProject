@@ -1,23 +1,21 @@
-var loginPage = function() {
+var loginButton = element(by.css('[class = "btn btn-danger"]')),
+    username = element(by.model('Auth.user.name')),
+    password = element(by.model('Auth.user.password')),
+    description = element(by.model('model[options.key]'));
 
-    this.loginButton = element(by.css('[class = "btn btn-danger"]'));
-    this.username = element(by.model('Auth.user.name'));
-    this.password = element(by.model('Auth.user.password'));
-    this.description = element(by.model('model[options.key]'));
+module.exports = {
+  gets: function() {
+    browser.get('http://www.way2automation.com/angularjs-protractor/registeration/#/login');
+  },
   
-    this.gets = function() {
-      browser.get('http://www.way2automation.com/angularjs-protractor/registeration/#/login');
-    };
-  
-    this.login = function(name, password, description) {
-      this.username.sendKeys(name);
-      this.password.sendKeys(password);
-      this.description.sendKeys(description);
-    };
+  login: function(name, passwordd, descriptionn) {
+    username.sendKeys(name);
+    password.sendKeys(passwordd);
+    description.sendKeys(descriptionn);
+  },
 
-    this.pressButton = function() {
-        this.loginButton.click();
-    }
-}
-  
-  module.exports = new loginPage();
+  pressButton: function() {
+    loginButton.click();
+  }
+
+}; 

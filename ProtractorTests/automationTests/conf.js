@@ -4,5 +4,8 @@ exports.config = {
     specs: ['specs/*[sS]pec.js'],
     capabilities: {
       browserName: 'chrome'
+    },
+    jasmineNodeOpts: {
+      defaultTimeoutInterval: 30000
     }
   }
