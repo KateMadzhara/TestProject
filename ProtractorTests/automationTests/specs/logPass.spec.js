@@ -3,11 +3,11 @@ var logPage = require('../pages/loginPage'),
 
 describe('Login test', function() {
     it('Enter values for login', function() {
-        logPage.gets('http://www.way2automation.com/angularjs-protractor/registeration/#/login');     
+        logPage.gets();     
         logPage.login('angular', 'password', 'angular');
         logPage.pressButton();
         browser.waitForAngular();
-        expect(homPage.text()).toBe('You\'re logged in!!');
+        expect(homPage.getText()).toBe('You\'re logged in!!');
 
     });
 });

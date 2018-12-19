@@ -8,10 +8,10 @@ module.exports = {
     browser.get('http://www.way2automation.com/angularjs-protractor/registeration/#/login');
   },
   
-  login: function(name, passwordd, descriptionn) {
+  login: function(name, passwords, descriptions) {
     username.sendKeys(name);
-    password.sendKeys(passwordd);
-    description.sendKeys(descriptionn);
+    password.sendKeys(passwords);
+    description.sendKeys(descriptions);
   },
 
   pressButton: function() {
