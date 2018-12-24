@@ -11,5 +11,8 @@
   "dependencies": {
     "jasmine": "^3.3.0",
     "protractor": "^5.4.1"
+  },
+  "devDependencies": {
+    "protractor-cucumber-framework": "^6.1.1"
   }
 }
