@@ -1,10 +1,13 @@
-Feature: Running Cucumber with Protractor
-    As a user of Protractor
-    I should be able to use Cucumber
-    In order to run my E2E tests
+Feature: First Test
 
-    Scenario: Protractor and Cucumber Test
-        Given I go to "https://angularjs.org/"
-        When I add "Be Awesome" in the task field
-        And I click the add button
-        Then I should see my new task in the list
+    Scenario: Protractor and Cucumber Test1
+        Given I am on "profile" page
+        When I submit profile form with "Test" and "Test@test.com"
+        And I click the NextSection button
+        Then I should be on "interests" page
+    
+    Scenario: Protractor and Cucumber Test2
+        Given I am on "interests" page
+        When I select "ps" radiobutton
+        And I click the NextSection button
+        Then I should be on "payment" page

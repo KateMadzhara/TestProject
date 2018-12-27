@@ -1,0 +1,1 @@
+var BasePage = require('./basePage');
